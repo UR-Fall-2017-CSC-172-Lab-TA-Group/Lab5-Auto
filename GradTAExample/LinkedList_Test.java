@@ -1,8 +1,9 @@
+import java.util.Iterator;
 import URList;
 import URArrayList;
 import URLinkedList;
-public class URLinkedList_Test
-{
+
+public class URLinkedList_Test{
 	//------------------------------------------------------------
 	// Boilerplate stuff
 	//------------------------------------------------------------
@@ -47,10 +48,11 @@ public class URLinkedList_Test
 	}
 
 	public static void test_addFirst(URLink<E> linklist) {  
-		while linklist.next() !=null:
+		while(linklist.next() !=null){
 			System. out.println(linklist.element());
-			linklist=linklist.next()
-	return 1
+			linklist=linklist.next();
+		}
+		return 1;
 	//------------------------------------------------------------
 	// Test cases
 	//
@@ -58,11 +60,11 @@ public class URLinkedList_Test
 	//------------------------------------------------------------
 
 	public static void test_addFirst() {  
-		URLink<int> linkList_1 = new URLink<int>();
+		URLink<Integer> linkList_1 = new URLink<Integer>();
 
-		linkList_1.addFirst(3)
-		linkList_1.addFirst(2)
-		linkList_1.addFirst(1)
+		linkList_1.addFirst(3);
+		linkList_1.addFirst(2);
+		linkList_1.addFirst(1);
 
 		Iterator<Integer> iter = linkList_1.iterator();
 		if(iter.next() != 1)
@@ -76,11 +78,11 @@ public class URLinkedList_Test
 	}
 
 	public static void test_addLast() {  
-		URLink<int> linkList_1 = new URLink<int>();
+		URLink<Integer> linkList_1 = new URLink<Integer>();
 
-		linkList_1.addLast(3)
-		linkList_1.addLast(2)
-		linkList_1.addLast(1)
+		linkList_1.addLast(3);
+		linkList_1.addLast(2);
+		linkList_1.addLast(1);
 
 		Iterator<Integer> iter = linkList_1.iterator();
 		if(iter.next() != 3)
@@ -94,17 +96,19 @@ public class URLinkedList_Test
 	}	
 
 	public static void test_peekFirst() {  
-		URLink<int> linkList_1 = new URLink<int>();
+		URLink<Integer> linkList_1 = new URLink<Integer>();
 
-		if (linkList_1.peekFirst()!=null):
+		if (linkList_1.peekFirst()!=null){
 			throw new FailedTestCase("Fail for empty case");
+		}
 
-		linkList_1.addFirst(3)
-		linkList_1.addFirst(2)
-		linkList_1.addFirst(1)
+		linkList_1.addFirst(3);
+		linkList_1.addFirst(2);
+		linkList_1.addFirst(1);
 	
-		if (linkList_1.peekFirst()!=3):
+		if (linkList_1.peekFirst()!=3){
 			throw new FailedTestCase("Fail to provide right peek value");
+		}
 		
 		Iterator<Integer> iter = linkList_1.iterator();
 		if(iter.next() != 1)
@@ -118,17 +122,19 @@ public class URLinkedList_Test
 	}
 
 	public static void test_peekLast() {  
-		URLink<int> linkList_1 = new URLink<int>();
+		URLink<Integer> linkList_1 = new URLink<Integer>();
 
-		if (linkList_1.peekLast()!=null):
+		if (linkList_1.peekLast()!=null){
 			throw new FailedTestCase("Fail for empty case");
+		}
 
-		linkList_1.addFirst(3)
-		linkList_1.addFirst(2)
-		linkList_1.addFirst(1)
+		linkList_1.addFirst(3);
+		linkList_1.addFirst(2);
+		linkList_1.addFirst(1);
 	
-		if (linkList_1.peekLast()!=1):
+		if (linkList_1.peekLast()!=1){
 			throw new FailedTestCase("Fail to provide right peek value");
+		}
 		
 		Iterator<Integer> iter = linkList_1.iterator();
 		if(iter.next() != 1)
@@ -142,17 +148,19 @@ public class URLinkedList_Test
 	}
 
 	public static void test_pollFirst() {  
-		URLink<int> linkList_1 = new URLink<int>();
+		URLink<Integer> linkList_1 = new URLink<Integer>();
 
-		if (linkList_1.pollFirst()!=null):
+		if (linkList_1.pollFirst()!=null){
 			throw new FailedTestCase("Fail for empty case");
+		}
 
-		linkList_1.addFirst(3)
-		linkList_1.addFirst(2)
-		linkList_1.addFirst(1)
+		linkList_1.addFirst(3);
+		linkList_1.addFirst(2);
+		linkList_1.addFirst(1);
 	
-		if (linkList_1.pollFirst()!=3):
+		if (linkList_1.pollFirst()!=3){
 			throw new FailedTestCase("Fail to provide right peek value");
+		}
 		
 		Iterator<Integer> iter = linkList_1.iterator();
 		if(iter.next() != 1)
@@ -164,17 +172,19 @@ public class URLinkedList_Test
 	}
 
 	public static void test_pollLast() {  
-		URLink<int> linkList_1 = new URLink<int>();
+		URLink<Integer> linkList_1 = new URLink<Integer>();
 
-		if (linkList_1.pollLast()!=null):
+		if (linkList_1.pollLast()!=null){
 			throw new FailedTestCase("Fail for empty case");
+		}
 
-		linkList_1.addFirst(3)
-		linkList_1.addFirst(2)
-		linkList_1.addFirst(1)
+		linkList_1.addFirst(3);
+		linkList_1.addFirst(2);
+		linkList_1.addFirst(1);
 	
-		if (linkList_1.pollLast()!=1):
+		if (linkList_1.pollLast()!=1){
 			throw new FailedTestCase("Fail to provide right peek value");
+		}
 		
 		Iterator<Integer> iter = linkList_1.iterator();
 		if(iter.next() != 2)

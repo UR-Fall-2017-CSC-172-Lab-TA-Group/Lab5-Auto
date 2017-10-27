@@ -123,9 +123,7 @@ public class URList_Test
 	// them assume that add works.
 	//------------------------------------------------------------
 
-	public static <T extends URList> void testAdd(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testAdd(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(0);
@@ -139,9 +137,7 @@ public class URList_Test
 			throw new FailedTestCase("Too many items in list");
 	}
 
-	public static <T extends URList> void testAddIndex(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testAddIndex(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(0);
@@ -159,9 +155,7 @@ public class URList_Test
 			throw new FailedTestCase("Too many items in list");
 	}
 
-	public static <T extends URList> void testAddAll(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testAddAll(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		ArrayList<Integer> c = new ArrayList<Integer>();
@@ -179,9 +173,7 @@ public class URList_Test
 			throw new FailedTestCase("Too many items in list");
 	}
 
-	public static <T extends URList> void testAddAllIndex(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testAddAllIndex(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		ArrayList<Integer> c = new ArrayList<Integer>();
@@ -202,9 +194,7 @@ public class URList_Test
 			throw new FailedTestCase("Too many items in list");
 	}
 
-	public static <T extends URList> void testClear(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testClear(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(0);
@@ -215,9 +205,7 @@ public class URList_Test
 			throw new FailedTestCase("List was not empty");
 	}
 
-	public static <T extends URList> void testContains(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testContains(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(0);
@@ -231,9 +219,7 @@ public class URList_Test
 			throw new FailedTestCase("List could not find element \"1\"");
 	}
 
-	public static <T extends URList> void testContainsAll(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testContainsAll(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(0);
@@ -256,9 +242,7 @@ public class URList_Test
 			throw new FailedTestCase("List could not find no elements");
 	}
 
-	public static <T extends URList> void testEquals(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testEquals(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 		URList<Integer> m = clazz.newInstance();
 		URList<Integer> n = clazz.newInstance();
@@ -285,9 +269,7 @@ public class URList_Test
 			throw new FailedTestCase("Empty lists are equal");
 	}
 
-	public static <T extends URList> void testIndexOf(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testIndexOf(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 		l.add(1);
 		l.add(0);
@@ -300,9 +282,7 @@ public class URList_Test
 			throw new FailedTestCase("Should return \"-1\" for elements the list doesn't contain");
 	}
 
-	public static <T extends URList> void testIsEmpty(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testIsEmpty(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		if(!l.isEmpty())
@@ -313,9 +293,7 @@ public class URList_Test
 			throw new FailedTestCase("List should not be empyt");
 	}
 
-	public static <T extends URList> void testRemoveIndex(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testRemoveIndex(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(0);
@@ -334,9 +312,7 @@ public class URList_Test
 			throw new FailedTestCase("Too many items in list");
 	}
 
-	public static <T extends URList> void testRemove(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testRemove(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(0);
@@ -357,9 +333,7 @@ public class URList_Test
 			throw new FailedTestCase("Too many items in list");
 	}
 
-	public static <T extends URList> void testRemoveAll(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testRemoveAll(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 		l.add(0); l.add(1); l.add(2);
 
@@ -376,9 +350,7 @@ public class URList_Test
 			throw new FailedTestCase("Too many items in list");
 	}
 
-	public static <T extends URList> void testSet(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testSet(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(1);
@@ -396,9 +368,7 @@ public class URList_Test
 			throw new FailedTestCase("Too many items in list");
 	}
 
-	public static <T extends URList> void testSize(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testSize(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		if(l.size() != 0)
@@ -421,9 +391,7 @@ public class URList_Test
 			throw new FailedTestCase("Size should be 0");
 	}
 
-	public static <T extends URList> void testSubList(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testSubList(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(0); l.add(1); l.add(2);
@@ -438,9 +406,7 @@ public class URList_Test
 			throw new FailedTestCase("Too many items in sublist");
 	}
 
-	public static <T extends URList> void testToArray(Class<T> clazz)
-		throws FailedTestCase, InstantiationException, IllegalAccessException
-	{
+	public static <T extends URList> void testToArray(Class<T> clazz) throws FailedTestCase, InstantiationException, IllegalAccessException{
 		URList<Integer> l = clazz.newInstance();
 
 		l.add(0); l.add(1); l.add(2);
