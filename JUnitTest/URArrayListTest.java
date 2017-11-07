@@ -6,6 +6,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+/*
+ * Created By: Sifan Ye
+ * Nov. 6, 2017
+ */
+
 public class URArrayListTest {
 
 private URArrayList<Integer> testArrList;
