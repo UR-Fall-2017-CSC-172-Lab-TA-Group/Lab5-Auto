@@ -16,7 +16,7 @@ public class URArrayListTest {
 private URArrayList<Integer> testArrList;
 	
 	@BeforeClass
-	public static void runsBeforeTheTest(){
+	public static void runsBeforeTheTest(){		
 		System.out.println("Run before any test method is executed");	
 	}
 	
@@ -34,6 +34,7 @@ private URArrayList<Integer> testArrList;
 	
 	@Test
 	public void testAddElemWithItr(){
+		System.out.println("Test add 3, 6, 5, 1, 4 and print with iterator");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};
 		String testOut = "";
 		for(int i: testElem){
@@ -45,10 +46,16 @@ private URArrayList<Integer> testArrList;
 		assertEquals("3 6 5 1 4 ", testOut);
 	}
 	
+	@Test
+	public void testIsNotEmpty(){
+		testArrList.add(2);
+		System.out.println("Test if list is not empty");
+		assertFalse(testArrList.isEmpty());
+	}
+	
 	@After
-	public void runOnceAfterEachTestMethod(){
-		testArrList = null;
-		System.out.println("Set testArrList to null");
+	public void runOnceAfterEachTestMethod(){	
+		System.out.println("Run after each test method");
 	}
 	
 	@AfterClass
