@@ -36,6 +36,20 @@ private URArrayList<Integer> testArrList;
 	}
 	
 	@Test
+	public void testAddElemWOItr(){
+		System.out.println("Test add 3, 6, 5, 1, 4 and print with index");
+		int[] testElem = new int[]{3, 6, 5, 1, 4};
+		for(int i: testElem){
+			testArrList.add(i);
+		}
+		String testOut = "";
+		for(int i = 0; i < 5; i++){
+			testOut += (testArrList.get(i) + " ");
+		}
+		assertEquals("3 6 5 1 4 ", testOut);
+	}
+	
+	@Test
 	public void testAddElemWithItr(){
 		System.out.println("Test add 3, 6, 5, 1, 4 and print with iterator");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};		
