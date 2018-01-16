@@ -30,12 +30,14 @@ private URArrayList<Integer> testArrList;
 	}
 	
 	@Test
+	//Is Empty
 	public void testIsEmpty(){
 		System.out.println("Test if list is empty");
 		assertTrue(testArrList.isEmpty());
 	}
 	
 	@Test
+	//Add
 	public void testAddElemWOItr(){
 		System.out.println("Test add 3, 6, 5, 1, 4 and print with index");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};
@@ -50,6 +52,7 @@ private URArrayList<Integer> testArrList;
 	}
 	
 	@Test
+	//Iterator
 	public void testAddElemWithItr(){
 		System.out.println("Test add 3, 6, 5, 1, 4 and print with iterator");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};		
@@ -64,6 +67,7 @@ private URArrayList<Integer> testArrList;
 	}
 	
 	@Test
+	//Is Empty
 	public void testIsNotEmpty(){
 		testArrList.add(2);
 		System.out.println("Test if list is not empty");
@@ -71,6 +75,7 @@ private URArrayList<Integer> testArrList;
 	}
 	
 	@Test
+	//Add all
 	public void testAddAll(){
 		System.out.println("Test add 3, 6, 5, 1, 4 as a list and print with iterator");
 		List<Integer> test = new ArrayList<Integer>();
@@ -88,7 +93,8 @@ private URArrayList<Integer> testArrList;
 	}
 	
 	@Test
-	public void testAllAllAtIndex(){
+	//Add all at index
+	public void testAddAllAtIndex(){
 		System.out.println("Test add 3, 6, 5, 1, 4 as a list");
 		System.out.println("At index 2 of (4,9,11,15), then print with iterator");
 		List<Integer> test = new ArrayList<Integer>();
@@ -106,7 +112,52 @@ private URArrayList<Integer> testArrList;
 		for(int i: testArrList){
 			testOut += (i + " ");
 		}
+		System.out.println(testOut);
 		assertEquals("4 9 3 6 5 1 4 11 15 ", testOut);
+	}
+	
+	@Test
+	//Contains All: Return True
+	public void testContainsAllTrue(){
+		System.out.println("Test contains all: Case True");
+		List<Integer> test = new ArrayList<Integer>();
+		test.add(3);
+		test.add(6);
+		test.add(5);
+		test.add(1);
+		test.add(4);
+		testArrList.add(4);
+		testArrList.add(11);
+		testArrList.add(3);
+		testArrList.add(15);
+		testArrList.add(6);
+		testArrList.add(5);
+		testArrList.add(1);
+		testArrList.add(9);
+		testArrList.add(4);
+		System.out.println(testArrList.containsAll(test));
+		assertTrue(testArrList.containsAll(test));
+	}
+	
+	@Test
+	//Contains All: Return false
+	public void testContainsAllFalse(){
+		System.out.println("Test contains all: Case False");
+		List<Integer> test = new ArrayList<Integer>();
+		test.add(3);
+		test.add(6);
+		test.add(5);
+		test.add(1);
+		test.add(4);
+		testArrList.add(4);
+		testArrList.add(9);
+		testArrList.add(11);
+		testArrList.add(15);
+		testArrList.add(3);
+		testArrList.add(5);
+		testArrList.add(4);
+		System.out.println(testArrList.containsAll(test));
+		assertTrue(!testArrList.containsAll(test));
 	}
 	
 	@After
