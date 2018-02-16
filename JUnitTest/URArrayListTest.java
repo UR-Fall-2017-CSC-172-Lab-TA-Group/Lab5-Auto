@@ -129,6 +129,30 @@ private URArrayList<Integer> testArrList;
 	}
 	
 	@Test
+	//Contains: Return True
+	public void testContainsTrue(){
+		testArrList.add(4);
+		testArrList.add(9);
+		testArrList.add(11);
+		testArrList.add(15);
+		System.out.println("Test contains() True");
+		System.out.println(testArrList.contains(9));
+		assertTrue(testArrList.contains(9));
+	}
+	
+	@Test
+	//Contains: Return False
+		public void testContainsFalse(){
+			testArrList.add(4);
+			testArrList.add(9);
+			testArrList.add(11);
+			testArrList.add(15);
+			System.out.println("Test contains() False");
+			System.out.println(testArrList.contains(12));
+			assertTrue(testArrList.contains(12));
+		}
+	
+	@Test
 	//Contains All: Return True
 	public void testContainsAllTrue(){
 		System.out.println("Test contains all: Case True");
