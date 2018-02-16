@@ -117,6 +117,18 @@ private URArrayList<Integer> testArrList;
 	}
 	
 	@Test
+	//Test clear()
+	public void testClear(){
+		testArrList.add(4);
+		testArrList.add(9);
+		testArrList.add(11);
+		testArrList.add(15);
+		testArrList.clear();
+		System.out.println("Test clear");
+		assertTrue(testArrList.isEmpty());
+	}
+	
+	@Test
 	//Contains All: Return True
 	public void testContainsAllTrue(){
 		System.out.println("Test contains all: Case True");
@@ -159,6 +171,8 @@ private URArrayList<Integer> testArrList;
 		System.out.println(testArrList.containsAll(test));
 		assertTrue(!testArrList.containsAll(test));
 	}
+	
+	
 	
 	@After
 	public void runOnceAfterEachTestMethod(){	
