@@ -25,8 +25,8 @@ private URArrayList<Integer> testArrList;
 	
 	@Before
 	public void runOnceBeforeEachTestMethod(){
-		testArrList = new URArrayList<Integer>(5);
-		System.out.println("Create new arraylist of size 5");
+		testArrList = new URArrayList<Integer>();
+		System.out.println("Create new arraylist of default size");
 	}
 	
 	@Test
