@@ -9,14 +9,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/*
- * Created By: Sifan Ye
- * Nov. 6, 2017
- */
+public class URLinkedListTest {
 
-public class URArrayListTest {
-
-private URArrayList<Integer> testArrList;
+private URLinkedList<Integer> testLinkedList;
 	
 	@BeforeClass
 	public static void runsBeforeTheTest(){		
@@ -26,14 +21,14 @@ private URArrayList<Integer> testArrList;
 	@Before
 	public void runOnceBeforeEachTestMethod(){
 		//System.out.println("Run before each test method.");
-		testArrList = new URArrayList<Integer>();
+		testLinkedList = new URLinkedList<Integer>();
 	}
 	
 	@Test
 	//Is Empty: True
 	public void testIsEmpty(){
 		System.out.println("Test isEmpty() returns true");
-		assertTrue(testArrList.isEmpty());
+		assertTrue(testLinkedList.isEmpty());
 	}
 	
 	@Test
@@ -42,11 +37,11 @@ private URArrayList<Integer> testArrList;
 		System.out.println("Test add() and print with index");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};
 		for(int i: testElem){
-			testArrList.add(i);
+			testLinkedList.add(i);
 		}
 		String testOut = "";
 		for(int i = 0; i < 5; i++){
-			testOut += (testArrList.get(i) + " ");
+			testOut += (testLinkedList.get(i) + " ");
 		}
 		assertEquals("3 6 5 1 4 ", testOut);
 	}
@@ -57,10 +52,10 @@ private URArrayList<Integer> testArrList;
 		System.out.println("Test add() and print with iterator");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};		
 		for(int i: testElem){
-			testArrList.add(i);
+			testLinkedList.add(i);
 		}
 		String testOut = "";
-		for(int i: testArrList){
+		for(int i: testLinkedList){
 			testOut += (i + " ");
 		}
 		assertEquals("3 6 5 1 4 ", testOut);
@@ -69,9 +64,9 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//Is Empty: False
 	public void testIsNotEmpty(){
-		testArrList.add(2);
+		testLinkedList.add(2);
 		System.out.println("Test isEmpty() returns false");
-		assertFalse(testArrList.isEmpty());
+		assertFalse(testLinkedList.isEmpty());
 	}
 	
 	@Test
@@ -84,9 +79,9 @@ private URArrayList<Integer> testArrList;
 		test.add(5);
 		test.add(1);
 		test.add(4);
-		testArrList.addAll(test);
+		testLinkedList.addAll(test);
 		String testOut = "";
-		for(int i: testArrList){
+		for(int i: testLinkedList){
 			testOut += (i + " ");
 		}
 		assertEquals("3 6 5 1 4 ", testOut);
@@ -103,13 +98,13 @@ private URArrayList<Integer> testArrList;
 		test.add(5);
 		test.add(1);
 		test.add(4);
-		testArrList.add(4);
-		testArrList.add(9);
-		testArrList.add(11);
-		testArrList.add(15);
-		testArrList.addAll(2, test);
+		testLinkedList.add(4);
+		testLinkedList.add(9);
+		testLinkedList.add(11);
+		testLinkedList.add(15);
+		testLinkedList.addAll(2, test);
 		String testOut = "";
-		for(int i: testArrList){
+		for(int i: testLinkedList){
 			testOut += (i + " ");
 		}
 		System.out.println(testOut);
@@ -119,37 +114,37 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//Test clear()
 	public void testClear(){
-		testArrList.add(4);
-		testArrList.add(9);
-		testArrList.add(11);
-		testArrList.add(15);
-		testArrList.clear();
+		testLinkedList.add(4);
+		testLinkedList.add(9);
+		testLinkedList.add(11);
+		testLinkedList.add(15);
+		testLinkedList.clear();
 		System.out.println("Test clear");
-		assertTrue(testArrList.isEmpty());
+		assertTrue(testLinkedList.isEmpty());
 	}
 	
 	@Test
 	//Contains: Return True
 	public void testContainsTrue(){
-		testArrList.add(4);
-		testArrList.add(9);
-		testArrList.add(11);
-		testArrList.add(15);
+		testLinkedList.add(4);
+		testLinkedList.add(9);
+		testLinkedList.add(11);
+		testLinkedList.add(15);
 		System.out.println("Test contains() returns true");
-		System.out.println(testArrList.contains(9));
-		assertTrue(testArrList.contains(9));
+		System.out.println(testLinkedList.contains(9));
+		assertTrue(testLinkedList.contains(9));
 	}
 	
 	@Test
 	//Contains: Return False
 		public void testContainsFalse(){
-			testArrList.add(4);
-			testArrList.add(9);
-			testArrList.add(11);
-			testArrList.add(15);
+			testLinkedList.add(4);
+			testLinkedList.add(9);
+			testLinkedList.add(11);
+			testLinkedList.add(15);
 			System.out.println("Test contains() returns false");
-			System.out.println(testArrList.contains(12));
-			assertTrue(!testArrList.contains(12));
+			System.out.println(testLinkedList.contains(12));
+			assertTrue(!testLinkedList.contains(12));
 		}
 	
 	@Test
@@ -162,17 +157,17 @@ private URArrayList<Integer> testArrList;
 		test.add(5);
 		test.add(1);
 		test.add(4);
-		testArrList.add(4);
-		testArrList.add(11);
-		testArrList.add(3);
-		testArrList.add(15);
-		testArrList.add(6);
-		testArrList.add(5);
-		testArrList.add(1);
-		testArrList.add(9);
-		testArrList.add(4);
-		System.out.println(testArrList.containsAll(test));
-		assertTrue(testArrList.containsAll(test));
+		testLinkedList.add(4);
+		testLinkedList.add(11);
+		testLinkedList.add(3);
+		testLinkedList.add(15);
+		testLinkedList.add(6);
+		testLinkedList.add(5);
+		testLinkedList.add(1);
+		testLinkedList.add(9);
+		testLinkedList.add(4);
+		System.out.println(testLinkedList.containsAll(test));
+		assertTrue(testLinkedList.containsAll(test));
 	}
 	
 	@Test
@@ -185,15 +180,15 @@ private URArrayList<Integer> testArrList;
 		test.add(5);
 		test.add(1);
 		test.add(4);
-		testArrList.add(4);
-		testArrList.add(9);
-		testArrList.add(11);
-		testArrList.add(15);
-		testArrList.add(3);
-		testArrList.add(5);
-		testArrList.add(4);
-		System.out.println(testArrList.containsAll(test));
-		assertTrue(!testArrList.containsAll(test));
+		testLinkedList.add(4);
+		testLinkedList.add(9);
+		testLinkedList.add(11);
+		testLinkedList.add(15);
+		testLinkedList.add(3);
+		testLinkedList.add(5);
+		testLinkedList.add(4);
+		System.out.println(testLinkedList.containsAll(test));
+		assertTrue(!testLinkedList.containsAll(test));
 	}
 	
 	@Test
@@ -274,18 +269,6 @@ private URArrayList<Integer> testArrList;
 		
 	}
 	
-	@Test
-	//ensureCapacity()
-	public void testEnsureCapacity(){
-		
-	}
-	
-	@Test
-	//getCapacity()
-	public void testGetCapacity(){
-		
-	}
-	
 	@After
 	public void runOnceAfterEachTestMethod(){	
 		//System.out.println("Run after each test method");
@@ -295,5 +278,5 @@ private URArrayList<Integer> testArrList;
 	public static void runsAfterTheTest(){
 		System.out.println("Tests have been concluded");	
 	}
-
+	
 }
