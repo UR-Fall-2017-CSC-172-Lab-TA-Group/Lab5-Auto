@@ -217,13 +217,31 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//indexOf()
 	public void testIndexOf(){
-		
+		System.out.println("Test indexOf() returns index of element");
+		testArrList.add(4);
+		testArrList.add(9);
+		testArrList.add(11);
+		testArrList.add(15);
+		System.out.println(testArrList.indexOf(11));
+		assertEquals(2, testArrList.indexOf(11));
 	}
 	
 	@Test
 	//remove()
 	public void testRemove(){
-		
+		System.out.println("Test remove() remove element at indext");
+		testArrList.add(4);
+		testArrList.add(9);
+		testArrList.add(11);
+		testArrList.add(15);
+		testArrList.add(12);
+		testArrList.remove(2);
+		String testOut = "";
+		for(int i: testArrList){
+			testOut += (i + " ");
+		}
+		System.out.println(testOut);
+		assertEquals("4 9 15 12 ", testOut);
 	}
 	
 	@Test
