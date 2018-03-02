@@ -304,13 +304,41 @@ private URLinkedList<Integer> testLinkedList;
 	@Test
 	//E peekFirst()
 	public void testpeekFirst(){
+		testLinkedList.add(99);
+		testLinkedList.add(2);
+		testLinkedList.add(3);
+		testLinkedList.add(4);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(-99);
 		
+		assertTrue(testLInkedList.peekFirst() == 99);
 	}
 	
 	@Test
 	//E peekLast()
 	public void testpeekLast(){
+		testLinkedList.add(99);
+		testLinkedList.add(2);
+		testLinkedList.add(3);
+		testLinkedList.add(4);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(1);
+		testLinkedList.add(-99);
 		
+		assertTrue(testLInkedList.peekLast() == -99);
 	}
 	
 	
