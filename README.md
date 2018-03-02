@@ -11,7 +11,7 @@ Dependencies: [JUnit4](https://mvnrepository.com/artifact/junit/junit/4.12), [Ja
 
 To use autograding, place the \*Test.java files and full student submission in the same folder along with [JUnit4](https://mvnrepository.com/artifact/junit/junit/4.12), [Java hamcrest 2.0.0.0](https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest/2.0.0.0) jar files.
 
-*UNIX:*
+#### UNIX:
 run autograde.sh
 
 *Note:* If your terminal says permission denied, try:
