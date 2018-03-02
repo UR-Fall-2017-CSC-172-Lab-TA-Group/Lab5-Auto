@@ -301,6 +301,20 @@ private URLinkedList<Integer> testLinkedList;
 		
 	}
 	
+	@Test
+	//E peekFirst()
+	public void testpeekFirst(){
+		
+	}
+	
+	@Test
+	//E peekLast()
+	public void testpeekLast(){
+		
+	}
+	
+	
+	
 	@After
 	public void runOnceAfterEachTestMethod(){	
 		//System.out.println("Run after each test method");
