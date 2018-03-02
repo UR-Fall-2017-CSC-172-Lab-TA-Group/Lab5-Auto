@@ -199,14 +199,14 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//Equals: Return True
 	public void testEqualsTrue(){
-		List<Integer> test1 = new ArrayList<Integer>();
+		URList<Integer> test1 = new URArrayList<Integer>();
 		test1.add(1);
 		test1.add(110);
 		test1.add(100);
 		test1.add(114);
 		test1.add(101);
 		test1.add(115);
-		List<Integer> test2 = new ArrayList<Integer>();
+		URList<Integer> test2 = new URArrayList<Integer>();
 		test2.add(1);
 		test2.add(110);
 		test2.add(100);
@@ -220,14 +220,14 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//Equals: Return False
 	public void testEqualsFalse(){
-		List<Integer> test1 = new ArrayList<Integer>();
+		URList<Integer> test1 = new URArrayList<Integer>();
 		test1.add(1);
 		test1.add(110);
 		test1.add(100);
 		test1.add(114);
 		test1.add(101);
 		test1.add(115);
-		List<Integer> test2 = new ArrayList<Integer>();
+		URList<Integer> test2 = new URArrayList<Integer>();
 		test2.add(15);
 		test2.add(108);
 		test2.add(108);
