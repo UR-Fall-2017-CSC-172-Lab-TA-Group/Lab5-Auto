@@ -280,13 +280,18 @@ private URLinkedList<Integer> testLinkedList;
 	@Test
 	//set()
 	public void testSet(){
-		
+		testLinkedList.set(1,18);
+		System.out.println("set index 1 to 18: " + testLinkedList);
 	}
 	
 	@Test
 	//size()
 	public void testSize(){
-		
+		testLinkedList.add(4);
+		testLinkedList.add(9);
+		testLinkedList.add(11);
+		testLinkedList.add(15);
+		System.out.println("Size(should be 4): "+ testLinkedList.size());
 	}
 	
 	@Test
