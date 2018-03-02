@@ -1,6 +1,8 @@
 # Lab5-Auto
 Test cases to grade Lab 5 Automatically
 
+This lab focuses on implementation of ArrayLists, LinkedLists and their Iterators
+
 ## GradTAExmaple Folder
 Example from Grad TA
 
@@ -20,4 +22,4 @@ run autograde.sh
 ```
 
 ## ImplementationToTest Folder
-The folder contains an implementation from a student last semester. Feel free to add more test cases, but make sure different cases stays in difference folders
+The folder contains an implementation from a student last semester. Feel free to add more test cases, but make sure different cases stays in different folders
