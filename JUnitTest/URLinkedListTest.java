@@ -304,13 +304,13 @@ private URLinkedList<Integer> testLinkedList;
 	@Test
 	//E peekFirst()
 	public void testpeekFirst(){
-		
+		testLinkedList = new URLinkedList<Integer>();
 	}
 	
 	@Test
 	//E peekLast()
 	public void testpeekLast(){
-		
+		testLinkedList = new URLinkedList<Integer>();	
 	}
 	
 	
