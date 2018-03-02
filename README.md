@@ -14,5 +14,10 @@ To use autograding, place the \*Test.java files and full student submission in t
 *UNIX:*
 run autograde.sh
 
+*Note:* If your terminal says permission denied, try:
+```bash
+> chmod 777 autograde.sh
+```
+
 ## ImplementationToTest Folder
 The folder contains an implementation from a student last semester. Feel free to add more test cases, but make sure different cases stays in difference folders
