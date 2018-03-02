@@ -11,7 +11,7 @@ Attempt to use JUnitTest for auto grading
 
 Dependencies: [JUnit4](https://mvnrepository.com/artifact/junit/junit/4.12), [Java hamcrest 2.0.0.0](https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest/2.0.0.0)
 
-To use autograding, place the `\*Test.java` files, `autograde.sh`, and full student submission in the same folder along with [JUnit4](https://mvnrepository.com/artifact/junit/junit/4.12), [Java hamcrest 2.0.0.0](https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest/2.0.0.0) jar files.
+To use autograding, place the `*Test.java` files, `autograde.sh`, and full student submission in the same folder along with [JUnit4](https://mvnrepository.com/artifact/junit/junit/4.12), [Java hamcrest 2.0.0.0](https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest/2.0.0.0) jar files.
 
 ### UNIX:
 run autograde.sh
