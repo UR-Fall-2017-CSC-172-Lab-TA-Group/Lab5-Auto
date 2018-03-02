@@ -32,14 +32,14 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//Is Empty: True
 	public void testIsEmpty(){
-		System.out.println("Test isEmpty() returns true");
+		//System.out.println("Test isEmpty() returns true");
 		assertTrue(testArrList.isEmpty());
 	}
 	
 	@Test
 	//Add
 	public void testAddElemWOItr(){
-		System.out.println("Test add() and print with index");
+		//System.out.println("Test add() and print with index");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};
 		for(int i: testElem){
 			testArrList.add(i);
@@ -54,7 +54,7 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//Iterator
 	public void testAddElemWithItr(){
-		System.out.println("Test add() and print with iterator");
+		//System.out.println("Test add() and print with iterator");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};		
 		for(int i: testElem){
 			testArrList.add(i);
@@ -70,14 +70,14 @@ private URArrayList<Integer> testArrList;
 	//Is Empty: False
 	public void testIsNotEmpty(){
 		testArrList.add(2);
-		System.out.println("Test isEmpty() returns false");
+		//System.out.println("Test isEmpty() returns false");
 		assertFalse(testArrList.isEmpty());
 	}
 	
 	@Test
 	//Add all
 	public void testAddAll(){
-		System.out.println("Test addAll() as a list and print with iterator");
+		//System.out.println("Test addAll() as a list and print with iterator");
 		List<Integer> test = new ArrayList<Integer>();
 		test.add(3);
 		test.add(6);
@@ -95,7 +95,7 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//Add all at index
 	public void testAddAllAtIndex(){
-		System.out.println("Test addAllAtIndex() as a list");
+		//System.out.println("Test addAllAtIndex() as a list");
 		//System.out.println("At index 2 of (4,9,11,15), then print with iterator");
 		List<Integer> test = new ArrayList<Integer>();
 		test.add(3);
@@ -112,7 +112,7 @@ private URArrayList<Integer> testArrList;
 		for(int i: testArrList){
 			testOut += (i + " ");
 		}
-		System.out.println(testOut);
+		//System.out.println(testOut);
 		assertEquals("4 9 3 6 5 1 4 11 15 ", testOut);
 	}
 	
@@ -124,7 +124,7 @@ private URArrayList<Integer> testArrList;
 		testArrList.add(11);
 		testArrList.add(15);
 		testArrList.clear();
-		System.out.println("Test clear");
+		//System.out.println("Test clear");
 		assertTrue(testArrList.isEmpty());
 	}
 	
@@ -135,8 +135,8 @@ private URArrayList<Integer> testArrList;
 		testArrList.add(9);
 		testArrList.add(11);
 		testArrList.add(15);
-		System.out.println("Test contains() returns true");
-		System.out.println(testArrList.contains(9));
+		//System.out.println("Test contains() returns true");
+		//System.out.println(testArrList.contains(9));
 		assertTrue(testArrList.contains(9));
 	}
 	
@@ -147,15 +147,15 @@ private URArrayList<Integer> testArrList;
 			testArrList.add(9);
 			testArrList.add(11);
 			testArrList.add(15);
-			System.out.println("Test contains() returns false");
-			System.out.println(testArrList.contains(12));
+			//System.out.println("Test contains() returns false");
+			//System.out.println(testArrList.contains(12));
 			assertTrue(!testArrList.contains(12));
 		}
 	
 	@Test
 	//Contains All: Return True
 	public void testContainsAllTrue(){
-		System.out.println("Test containsAll() returns true");
+		//System.out.println("Test containsAll() returns true");
 		List<Integer> test = new ArrayList<Integer>();
 		test.add(3);
 		test.add(6);
@@ -171,14 +171,14 @@ private URArrayList<Integer> testArrList;
 		testArrList.add(1);
 		testArrList.add(9);
 		testArrList.add(4);
-		System.out.println(testArrList.containsAll(test));
+		//System.out.println(testArrList.containsAll(test));
 		assertTrue(testArrList.containsAll(test));
 	}
 	
 	@Test
 	//Contains All: Return false
 	public void testContainsAllFalse(){
-		System.out.println("Test containsAll() turns false");
+		//System.out.println("Test containsAll() turns false");
 		List<Integer> test = new ArrayList<Integer>();
 		test.add(3);
 		test.add(6);
@@ -192,7 +192,7 @@ private URArrayList<Integer> testArrList;
 		testArrList.add(3);
 		testArrList.add(5);
 		testArrList.add(4);
-		System.out.println(testArrList.containsAll(test));
+		//System.out.println(testArrList.containsAll(test));
 		assertTrue(!testArrList.containsAll(test));
 	}
 	
@@ -213,7 +213,7 @@ private URArrayList<Integer> testArrList;
 		test2.add(114);
 		test2.add(101);
 		test2.add(115);
-		System.out.println(test1.equals(test2));
+		//System.out.println(test1.equals(test2));
 		assertTrue(test1.equals(test2));
 	}
 	
@@ -236,7 +236,7 @@ private URArrayList<Integer> testArrList;
 		test2.add(118);
 		test2.add(101);
 		test2.add(122);
-		System.out.println(test1.equals(test2));
+		//System.out.println(test1.equals(test2));
 		assertFalse(test1.equals(test2));
 	}
 	
@@ -249,19 +249,19 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//indexOf()
 	public void testIndexOf(){
-		System.out.println("Test indexOf() returns index of element");
+		//System.out.println("Test indexOf() returns index of element");
 		testArrList.add(4);
 		testArrList.add(9);
 		testArrList.add(11);
 		testArrList.add(15);
-		System.out.println(testArrList.indexOf(11));
+		//System.out.println(testArrList.indexOf(11));
 		assertEquals(2, testArrList.indexOf(11));
 	}
 	
 	@Test
 	//remove()
 	public void testRemove(){
-		System.out.println("Test remove() remove element at indext");
+		//System.out.println("Test remove() remove element at indext");
 		testArrList.add(4);
 		testArrList.add(9);
 		testArrList.add(11);
@@ -272,7 +272,7 @@ private URArrayList<Integer> testArrList;
 		for(int i: testArrList){
 			testOut += (i + " ");
 		}
-		System.out.println(testOut);
+		//System.out.println(testOut);
 		assertEquals("4 9 15 12 ", testOut);
 	}
 	

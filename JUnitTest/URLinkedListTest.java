@@ -27,14 +27,14 @@ private URLinkedList<Integer> testLinkedList;
 	@Test
 	//Is Empty: True
 	public void testIsEmpty(){
-		System.out.println("Test isEmpty() returns true");
+		//System.out.println("Test isEmpty() returns true");
 		assertTrue(testLinkedList.isEmpty());
 	}
 	
 	@Test
 	//Add
 	public void testAddElemWOItr(){
-		System.out.println("Test add() and print with index");
+		//System.out.println("Test add() and print with index");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};
 		for(int i: testElem){
 			testLinkedList.add(i);
@@ -49,7 +49,7 @@ private URLinkedList<Integer> testLinkedList;
 	@Test
 	//Iterator
 	public void testAddElemWithItr(){
-		System.out.println("Test add() and print with iterator");
+		//System.out.println("Test add() and print with iterator");
 		int[] testElem = new int[]{3, 6, 5, 1, 4};		
 		for(int i: testElem){
 			testLinkedList.add(i);
@@ -65,14 +65,14 @@ private URLinkedList<Integer> testLinkedList;
 	//Is Empty: False
 	public void testIsNotEmpty(){
 		testLinkedList.add(2);
-		System.out.println("Test isEmpty() returns false");
+		//System.out.println("Test isEmpty() returns false");
 		assertFalse(testLinkedList.isEmpty());
 	}
 	
 	@Test
 	//Add all
 	public void testAddAll(){
-		System.out.println("Test addAll() as a list and print with iterator");
+		//System.out.println("Test addAll() as a list and print with iterator");
 		List<Integer> test = new ArrayList<Integer>();
 		test.add(3);
 		test.add(6);
@@ -90,7 +90,7 @@ private URLinkedList<Integer> testLinkedList;
 	@Test
 	//Add all at index
 	public void testAddAllAtIndex(){
-		System.out.println("Test addAllAtIndex() as a list");
+		//System.out.println("Test addAllAtIndex() as a list");
 		//System.out.println("At index 2 of (4,9,11,15), then print with iterator");
 		List<Integer> test = new ArrayList<Integer>();
 		test.add(3);
@@ -107,7 +107,7 @@ private URLinkedList<Integer> testLinkedList;
 		for(int i: testLinkedList){
 			testOut += (i + " ");
 		}
-		System.out.println(testOut);
+		//System.out.println(testOut);
 		assertEquals("4 9 3 6 5 1 4 11 15 ", testOut);
 	}
 	
@@ -119,7 +119,7 @@ private URLinkedList<Integer> testLinkedList;
 		testLinkedList.add(11);
 		testLinkedList.add(15);
 		testLinkedList.clear();
-		System.out.println("Test clear");
+		//System.out.println("Test clear");
 		assertTrue(testLinkedList.isEmpty());
 	}
 	
@@ -130,27 +130,27 @@ private URLinkedList<Integer> testLinkedList;
 		testLinkedList.add(9);
 		testLinkedList.add(11);
 		testLinkedList.add(15);
-		System.out.println("Test contains() returns true");
-		System.out.println(testLinkedList.contains(9));
+		//System.out.println("Test contains() returns true");
+		//System.out.println(testLinkedList.contains(9));
 		assertTrue(testLinkedList.contains(9));
 	}
 	
 	@Test
 	//Contains: Return False
-		public void testContainsFalse(){
-			testLinkedList.add(4);
-			testLinkedList.add(9);
-			testLinkedList.add(11);
-			testLinkedList.add(15);
-			System.out.println("Test contains() returns false");
-			System.out.println(testLinkedList.contains(12));
-			assertTrue(!testLinkedList.contains(12));
-		}
+	public void testContainsFalse(){
+		testLinkedList.add(4);
+		testLinkedList.add(9);
+		testLinkedList.add(11);
+		testLinkedList.add(15);
+		//System.out.println("Test contains() returns false");
+		//System.out.println(testLinkedList.contains(12));
+		assertTrue(!testLinkedList.contains(12));
+	}
 	
 	@Test
 	//Contains All: Return True
 	public void testContainsAllTrue(){
-		System.out.println("Test containsAll() returns true");
+		//System.out.println("Test containsAll() returns true");
 		List<Integer> test = new ArrayList<Integer>();
 		test.add(3);
 		test.add(6);
@@ -166,14 +166,14 @@ private URLinkedList<Integer> testLinkedList;
 		testLinkedList.add(1);
 		testLinkedList.add(9);
 		testLinkedList.add(4);
-		System.out.println(testLinkedList.containsAll(test));
+		//System.out.println(testLinkedList.containsAll(test));
 		assertTrue(testLinkedList.containsAll(test));
 	}
 	
 	@Test
 	//Contains All: Return false
 	public void testContainsAllFalse(){
-		System.out.println("Test containsAll() turns false");
+		//System.out.println("Test containsAll() turns false");
 		List<Integer> test = new ArrayList<Integer>();
 		test.add(3);
 		test.add(6);
@@ -187,7 +187,7 @@ private URLinkedList<Integer> testLinkedList;
 		testLinkedList.add(3);
 		testLinkedList.add(5);
 		testLinkedList.add(4);
-		System.out.println(testLinkedList.containsAll(test));
+		//System.out.println(testLinkedList.containsAll(test));
 		assertTrue(!testLinkedList.containsAll(test));
 	}
 	
@@ -208,7 +208,7 @@ private URLinkedList<Integer> testLinkedList;
 		test2.add(114);
 		test2.add(101);
 		test2.add(115);
-		System.out.println(test1.equals(test2));
+		//System.out.println(test1.equals(test2));
 		assertTrue(test1.equals(test2));
 	}
 	
@@ -231,7 +231,7 @@ private URLinkedList<Integer> testLinkedList;
 		test2.add(118);
 		test2.add(101);
 		test2.add(122);
-		System.out.println(test1.equals(test2));
+		//System.out.println(test1.equals(test2));
 		assertFalse(test1.equals(test2));
 	}
 	
