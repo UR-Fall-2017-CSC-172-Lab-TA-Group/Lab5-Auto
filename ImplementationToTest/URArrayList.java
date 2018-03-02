@@ -1,11 +1,5 @@
 import java.util.*;
-/**
- * Name: Anh Pham
- * NetID: apham5
- * Lab session: MW 1650 - 1805
- * Lab 5
- * I worked with on this lab.
- */
+
 public class URArrayList<E> implements URList<E>
 {
     private E[] array;

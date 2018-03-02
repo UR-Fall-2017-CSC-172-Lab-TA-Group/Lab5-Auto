@@ -1,15 +1,9 @@
 import java.util.*;
-/**
- * Name: Anh Pham
- * NetID: apham5
- * Lab session: MW 1650 - 1805
- * Lab 5
- * I worked with on this lab.
- */
+
 public class URLinkedList<E> implements URList<E>
 {
-    private URLink<E> head;
-    private URLink<E> tail;
+    private URNode<E> head;
+    private URNode<E> tail;
     private int listSize;
     
     public URLinkedList(int size) {
@@ -21,8 +15,8 @@ public class URLinkedList<E> implements URList<E>
     }
     
     public void clear() {
-        head = new URLink<E>(null,tail);
-        tail = new URLink<E>(head, null);
+        head = new URNode<E>(null,tail);
+        tail = new URNode<E>(head, null);
         listSize = 0;
     }
     
@@ -31,8 +25,8 @@ public class URLinkedList<E> implements URList<E>
     }
     
     private class Itr implements Iterator<E> {
-        URLink<E> lastReturned;
-        URLink<E> next;
+        URNode<E> lastReturned;
+        URNode<E> next;
         private int nextIndex;
         
         public Itr() {
@@ -55,7 +49,7 @@ public class URLinkedList<E> implements URList<E>
     }
     
     public boolean add(E e) {
-        URLink newElem = new URLink<E>(e, tail.prev(), tail);
+        URNode newElem = new URNode<E>(e, tail.prev(), tail);
         tail.prev().setNext(newElem);
         tail.setPrev(newElem);
         listSize++;
@@ -97,11 +91,11 @@ public class URLinkedList<E> implements URList<E>
     
     public void add(int index, E element) {
         if ((index<0)||(index>=listSize)) { return; }
-        URLink<E> ptr = head.next();
+        URNode<E> ptr = head.next();
         for (int i = 0; i<index; i++) {
             ptr = ptr.next();
         }
-        URLink<E> newElem = new URLink<E>(element, ptr.prev(), ptr);
+        URNode<E> newElem = new URNode<E>(element, ptr.prev(), ptr);
         ptr.prev().setNext(newElem);
         ptr.setPrev(newElem);
         listSize++;
@@ -125,7 +119,7 @@ public class URLinkedList<E> implements URList<E>
     }
     
     public boolean contains(Object o)  {
-        URLink<E> ptr = head.next();
+        URNode<E> ptr = head.next();
         for (int i = 0; i<listSize; i++) {
             if (ptr.element().equals(o)) {return true; }
             ptr = ptr.next();
@@ -158,7 +152,7 @@ public class URLinkedList<E> implements URList<E>
     
     public E get(int index) {
         if ((index<0)||(index>=listSize)) { return null; }
-        URLink<E> ptr = head.next();
+        URNode<E> ptr = head.next();
         for (int i = 0; i<index; i++) {
             ptr = ptr.next();
         }
@@ -166,7 +160,7 @@ public class URLinkedList<E> implements URList<E>
     }
     
     public int indexOf(Object o) {
-        URLink<E> ptr = head.next();
+        URNode<E> ptr = head.next();
         for (int i = 0; i<listSize; i++) {
             if (ptr.element().equals(o)) { return i; }
             ptr = ptr.next();
@@ -180,7 +174,7 @@ public class URLinkedList<E> implements URList<E>
     
     public E remove(int index) {
         if ((index<0)||(index>=listSize)) { return null; }
-        URLink<E> ptr = head.next();
+        URNode<E> ptr = head.next();
         for (int i = 0; i<index; i++) {
             ptr = ptr.next();
         }
@@ -210,11 +204,11 @@ public class URLinkedList<E> implements URList<E>
     
     public E set(int index, E element) {
         if ((index<0)||(index>=listSize)) { return null; }
-        URLink<E> ptr = head.next();
+        URNode<E> ptr = head.next();
         for (int i = 0; i<index; i++) {
             ptr = ptr.next();
         }
-        URLink<E> newElem = new URLink<E>(element, ptr.prev(), ptr.next());
+        URNode<E> newElem = new URNode<E>(element, ptr.prev(), ptr.next());
         E temp = ptr.element();
         ptr.prev().setNext(newElem);
         ptr.next().setPrev(newElem);
@@ -229,7 +223,7 @@ public class URLinkedList<E> implements URList<E>
         if (fromIndex<0) { fromIndex = 0; }
         if (toIndex > listSize) { toIndex = listSize-1; }
         URList sub = new URLinkedList<E>();
-        URLink<E> ptr = head.next();
+        URNode<E> ptr = head.next();
         for (int i=0; i<fromIndex-1; i++) {
             ptr = ptr.next();
         }
@@ -242,27 +236,11 @@ public class URLinkedList<E> implements URList<E>
     
     public Object[] toArray() {
         Object[] result = new Object[listSize];
-        URLink<E> ptr = head.next();
+        URNode<E> ptr = head.next();
         for (int i = 0; i<listSize; i++) {
             result[i] = ptr.element();
             ptr = ptr.next();
         }
         return result;
     }
-}
-
-class URLink<E> {
-    private E e;
-    private URLink<E> n;
-    private URLink<E> p;
-    
-    URLink(E it, URLink<E> inp, URLink<E> inn) { e = it; p = inp; n = inn; }
-    URLink(URLink<E> inp, URLink<E> inn) { p = inp; n = inn; }
-    
-    public E element() { return e; }
-    public E setElement(E it) { return e = it; }
-    public URLink<E> next() { return n; }
-    public URLink<E> setNext(URLink<E> nextval) { return n = nextval; }
-    public URLink<E> prev() { return p; }
-    public URLink<E> setPrev(URLink<E> prevval) { return p = prevval; }
 }
