@@ -318,7 +318,7 @@ private URLinkedList<Integer> testLinkedList;
 		testLinkedList.add(1);
 		testLinkedList.add(-99);
 		
-		assertTrue(testLInkedList.peekFirst() == 99);
+		assertTrue(testLinkedList.peekFirst() == 99);
 	}
 	
 	@Test
@@ -338,7 +338,7 @@ private URLinkedList<Integer> testLinkedList;
 		testLinkedList.add(1);
 		testLinkedList.add(-99);
 		
-		assertTrue(testLInkedList.peekLast() == -99);
+		assertTrue(testLinkedList.peekLast() == -99);
 	}
 	
 	
