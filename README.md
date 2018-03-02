@@ -16,7 +16,7 @@ To use autograding, place the `*Test.java` files, `autograde.sh`, and full stude
 ### UNIX:
 run autograde.sh
 
-*Note:* If your terminal says permission denied, try:
+*Note:* If your terminal says permission denied, try changing the permission then run again:
 ```bash
 > chmod 777 autograde.sh
 ```
