@@ -308,7 +308,7 @@ private URLinkedList<Integer> testLinkedList;
 	
 	@AfterClass
 	public static void runsAfterTheTest(){
-		System.out.println("Tests have been concluded");	
+		System.out.println("\nTests have been concluded");	
 	}
 	
 }
