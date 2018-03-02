@@ -303,13 +303,18 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//set()
 	public void testSet(){
-		
+		testArrList.set(1,18);
+		System.out.println("set index 1 to 18: " + testArrList);
 	}
 	
 	@Test
 	//size()
 	public void testSize(){
-		
+		testArrList.add(4);
+		testArrList.add(9);
+		testArrList.add(11);
+		testArrList.add(15);
+		System.out.println("Size(should be 4): "+ testArrList.size());
 	}
 	
 	@Test
