@@ -346,6 +346,36 @@ private URLinkedList<Integer> testLinkedList;
 		assertTrue(testLinkedList.peekLast() == -99);
 	}
 	
+	@Test
+	//pollLast()
+	public void testPollFirst() {
+		System.out.println("Test Poll First");
+		String res = ""; //holds their result
+		testLinkedList.add(5);
+		testLinkedList.add(9);
+		testLinkedList.add(3);
+		testLinkedList.add(2);
+		testLinkedList.add(10);
+		res += testLinkedList.pollFirst();
+		String testRes = "5"; //holds what result should be
+		assertEquals(testRes, res);
+	}
+	
+	@Test
+	//pollFirst()
+	public void testPollLast() {
+		System.out.println("Test Poll Last");
+		String res = ""; //holds their result
+		testLinkedList.add(5);
+		testLinkedList.add(9);
+		testLinkedList.add(3);
+		testLinkedList.add(2);
+		testLinkedList.add(10);
+		res += testLinkedList.pollLast();
+		String testRes = "10"; //holds what result should be
+		assertEquals(testRes, res);
+	}
+	
 	
 	
 	@After
