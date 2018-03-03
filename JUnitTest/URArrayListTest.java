@@ -303,8 +303,14 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//set()
 	public void testSet(){
+		testArrList.add(17);
+		testArrList.add(19);
 		testArrList.set(1,18);
-		System.out.println("set index 1 to 18: " + testArrList);
+		String testOut = "";
+		for(int i: testArrList){
+			testOut += (i + " ");
+		}
+		assertEquals("17 18 ",testOut);
 	}
 	
 	@Test
@@ -314,7 +320,7 @@ private URArrayList<Integer> testArrList;
 		testArrList.add(9);
 		testArrList.add(11);
 		testArrList.add(15);
-		System.out.println("Size(should be 4): "+ testArrList.size());
+		assertEquals(testArrList.size(),4);
 	}
 	
 	@Test
