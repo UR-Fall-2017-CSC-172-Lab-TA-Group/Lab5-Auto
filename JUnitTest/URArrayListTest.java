@@ -338,12 +338,23 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//ensureCapacity()
 	public void testEnsureCapacity(){
+		int oldCapacity =testArrList.getCapacity();
+		for(int i =0; i <= oldCapacity; i++) {
+			testArrList.add(42);
+		}
 		
+		assertTrue(oldCapacity < testArrList.getCapacity());
 	}
 	
 	@Test
 	//getCapacity()
 	public void testGetCapacity(){
+		testArrList.add(4);
+		testArrList.add(4);
+		testArrList.add(4);
+		testArrList.add(4);
+		
+		assertTrue(testArrList.size() < testArrList.getCapacity() );
 		
 	}
 	
