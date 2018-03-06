@@ -256,13 +256,37 @@ private URLinkedList<Integer> testLinkedList;
 	@Test
 	//boolean remove() true
 	public void testBoolRemoveTrue(){
-		
+		testLinkedList.add(4);
+		testLinkedList.add(9);
+		testLinkedList.add(11);
+		testLinkedList.add(15);
+		testLinkedList.add(12);
+		boolean result = testLinkedList.remove((Object) 11);
+		String testOut = "";
+		for(int i: testLinkedList){
+			testOut += (i + " ");
+		}
+		//System.out.println(testOut);
+		assertEquals(true, result);
+		assertEquals("4 9 15 12 ", testOut);
 	}
 	
 	@Test
 	//boolean remove() false
 	public void testBoolRemoveFalse(){
-		
+		testLinkedList.add(4);
+		testLinkedList.add(9);
+		testLinkedList.add(11);
+		testLinkedList.add(15);
+		testLinkedList.add(12);
+		boolean result = testLinkedList.remove((Object) 8);
+		String testOut = "";
+		for(int i: testLinkedList){
+			testOut += (i + " ");
+		}
+		//System.out.println(testOut);
+		assertEquals(false, result);
+		assertEquals("4 9 11 15 12 ", testOut);
 	}
 	
 	@Test

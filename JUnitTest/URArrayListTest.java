@@ -279,13 +279,37 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//boolean remove() true
 	public void testBoolRemoveTrue(){
-		
+		testArrList.add(4);
+		testArrList.add(9);
+		testArrList.add(11);
+		testArrList.add(15);
+		testArrList.add(12);
+		boolean result = testArrList.remove((Object) 11);
+		String testOut = "";
+		for(int i: testArrList){
+			testOut += (i + " ");
+		}
+		//System.out.println(testOut);
+		assertEquals(true, result);
+		assertEquals("4 9 15 12 ", testOut);
 	}
 	
 	@Test
 	//boolean remove() false
 	public void testBoolRemoveFalse(){
-		
+		testArrList.add(4);
+		testArrList.add(9);
+		testArrList.add(11);
+		testArrList.add(15);
+		testArrList.add(12);
+		boolean result = testArrList.remove((Object) 8);
+		String testOut = "";
+		for(int i: testArrList){
+			testOut += (i + " ");
+		}
+		//System.out.println(testOut);
+		assertEquals(false, result);
+		assertEquals("4 9 11 15 12 ", testOut);
 	}
 	
 	@Test
