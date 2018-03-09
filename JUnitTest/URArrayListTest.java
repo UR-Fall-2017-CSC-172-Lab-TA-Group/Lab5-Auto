@@ -350,7 +350,18 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//subList()
 	public void testSubList(){
-		
+		testArrList.add(6); //0
+		testArrList.add(36);
+		testArrList.add(0); //2
+		testArrList.add(200); //3
+		testArrList.add(999);
+		testArrList.add(1000); //5
+		URList other = testArrList.subList(3, 6);
+		String res = "";
+		for (int i = 0; i < 3; i++) {
+			res += other.get(i) + " ";
+		}
+		assertEquals("200 999 1000 ", res);
 	}
 	
 	@Test
