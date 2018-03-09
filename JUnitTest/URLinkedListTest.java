@@ -327,7 +327,19 @@ private URLinkedList<Integer> testLinkedList;
 	@Test
 	//subList()
 	public void testSubList(){
+		testLinkedList.add(6);
+		testLinkedList.add(100);
+		testLinkedList.add(50);
+		testLinkedList.add(10);
+		testLinkedList.add(1);
+		testLinkedList.add(3);
+		URList other = testLinkedList.subList(2, 5);
+		String res = "";
+		for (int i = 0; i < 3; i++) {
+			res += other.get(i) + " ";
+		}
 		
+		assertEquals("50 10 1 ", res);
 	}
 	
 	@Test
