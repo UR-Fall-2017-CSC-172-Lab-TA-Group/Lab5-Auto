@@ -367,7 +367,16 @@ private URArrayList<Integer> testArrList;
 	@Test
 	//toArray()
 	public void testToArray(){
-		
+		testArrList.add(16);
+		testArrList.add(25);
+		testArrList.add(36);
+		testArrList.add(49);
+		Object[] objArray = testArrList.toArray();
+		int[] intArray = new int[4];
+		for(int i=0;i<objArray.length;i++) {
+			intArray[i] = ((Integer)objArray[i]).intValue();
+		}
+		assertEqual(new int[]{16,25,36,49}, intArray);
 	}
 	
 	@Test
