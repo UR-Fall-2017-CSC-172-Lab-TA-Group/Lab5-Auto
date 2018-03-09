@@ -372,11 +372,11 @@ private URArrayList<Integer> testArrList;
 		testArrList.add(36);
 		testArrList.add(49);
 		Object[] objArray = testArrList.toArray();
-		int[] intArray = new int[4];
-		for(int i=0;i<objArray.length;i++) {
-			intArray[i] = ((Integer)objArray[i]).intValue();
+		String[] strArray = new String[4];
+		for(int i = 0; i < objArray.length; i++) {
+			strArray[i] = objArray[i].toString();
 		}
-		assertEqual(new int[]{16,25,36,49}, intArray);
+		assertEquals(new String[]{"16","25","36","49"}, strArray);
 	}
 	
 	@Test
