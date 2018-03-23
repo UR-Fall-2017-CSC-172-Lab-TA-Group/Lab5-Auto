@@ -345,7 +345,16 @@ private URLinkedList<Integer> testLinkedList;
 	@Test
 	//toArray()
 	public void testToArray(){
-		
+		testLinkedList.add(16);
+		testLinkedList.add(25);
+		testLinkedList.add(36);
+		testLinkedList.add(49);
+		Object[] objArray = testArrList.toArray();
+		String[] strArray = new String[4];
+		for(int i = 0; i < objArray.length; i++) {
+			strArray[i] = objArray[i].toString();
+		}
+		assertEquals(new String[]{"16","25","36","49"}, strArray);
 	}
 	
 	@Test
