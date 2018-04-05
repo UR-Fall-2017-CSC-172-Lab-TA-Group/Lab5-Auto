@@ -349,7 +349,7 @@ private URLinkedList<Integer> testLinkedList;
 		testLinkedList.add(25);
 		testLinkedList.add(36);
 		testLinkedList.add(49);
-		Object[] objArray = testArrList.toArray();
+		Object[] objArray = testLinkedList.toArray();
 		String[] strArray = new String[4];
 		for(int i = 0; i < objArray.length; i++) {
 			strArray[i] = objArray[i].toString();
