@@ -22,7 +22,7 @@ To use autograding, place the student's submission of `URArrayList.java` and `UR
 
 *Note:* If your terminal says permission denied, try changing the permission then run again:
 ```bash
-> chmod 777 autograde.sh
+> chmod +x autograde.sh
 ```
 
 ## ImplementationToTest Folder
